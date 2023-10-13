@@ -1,0 +1,72 @@
+@layout('components.layouts.main')
+
+@section('title')
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>{{ data.title }} - Hunlian</title>
+@endsection
+
+@section('style')
+<style media="screen">
+
+</style>
+@endsection
+
+@section('content')
+  <div class="ui stackable four column grid">
+    <div class="three wide column">
+      @!component('components.navbar-menus', data=data, csrf=csrfField())
+    </div>
+    <div class="thirteen wide column">
+      <div class="ui header flex-between">
+        <span>{{ data.title }}</span>
+      </div>
+      <form class="ui segment form" method="post" action="">
+        <div class="field">
+          <label>姓名</label>
+          <input type="text" name="title" placeholder="" />
+        </div>
+        <div class="field">
+          <label>个人标签</label>
+          <input type="text" name="title" placeholder="" />
+        </div>
+        <div class="field">
+          <label>性别</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="sex" />
+            <i class="dropdown icon"></i>
+            <div class="default text">点击选择</div>
+            <div class="menu">
+              <div class="item" data-value="0">女</div>
+              <div class="item" data-value="1">男</div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>个人作品</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="sex" />
+            <i class="dropdown icon"></i>
+            <div class="default text">点击关联</div>
+            <div class="menu">
+              <div class="item" data-value="0">item01</div>
+              <div class="item" data-value="1">item02</div>
+              <div class="item" data-value="2">item03</div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>个人经历</label>
+          <textarea name="description" rows="8" cols="80"></textarea>
+        </div>
+        <button class="ui tiny button" type="submit" name="button" value="save">提交</button>
+      </form>
+    </div>
+  </div>
+@endsection
+
+@section('script')
+<script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+<script type="text/javascript">
+
+@endsection

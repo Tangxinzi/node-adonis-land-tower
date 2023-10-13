@@ -1,0 +1,10 @@
+<b>平台管理</b>
+<div class="ui vertical pointing menu">
+  <a class="{{ data.active == 'article' ? 'item active' : 'item' }}" href="{{ route('admin/ArticleController.index') }}">文章</a>
+  <a class="{{ data.active == 'designer' ? 'item active' : 'item' }}" href="{{ route('admin/DesignerController.index') }}">设计师</a>
+  <a class="{{ data.active == 'work' ? 'item active' : 'item' }}" href="">作品</a>
+</div>
+<b>系统设置</b>
+<div class="ui vertical pointing menu">
+  <a class="item" href="">退出</a>
+</div>
