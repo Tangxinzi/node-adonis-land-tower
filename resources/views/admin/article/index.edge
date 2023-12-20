@@ -28,14 +28,14 @@
       <div class="ui header flex-between">
         <span>{{ data.title }}</span>
       </div>
-      <form class="ui segment form" method="post" action="">
+      <form class="ui segment form" method="post" action="{{ route('admin/ArticleController.save') }}">
         <div class="field">
           <label>标题</label>
           <input type="text" name="title" placeholder="" />
         </div>
         <div class="field">
           <label>作者</label>
-          <input type="text" name="title" placeholder="" />
+          <input type="text" name="author" placeholder="" />
         </div>
         <div class="field">
           <label>封面</label>

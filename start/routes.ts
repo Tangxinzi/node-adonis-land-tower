@@ -27,4 +27,6 @@ Route.get('/', async ({ view }) => {
 Route.group(() => {
   Route.get('/designer', 'admin/DesignerController.index')
   Route.get('/article', 'admin/ArticleController.index')
+  
+  Route.post('/article/save', 'admin/ArticleController.save')
 }).prefix('/admin')
